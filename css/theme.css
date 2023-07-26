@@ -64,7 +64,7 @@ body {
 
 code {
   /* Use monospace before Courier so font looks better on Android Chrome. */
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace,
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace,
     Courier;
 }
 
@@ -1113,7 +1113,7 @@ pre.Code code {
 
 .Toggle__Summary::before {
   /* If we don't specify "content", this element doesn't show. */
-  content: '';
+  content: "";
   /* Prevent this element shrink when content is long. */
   flex: 0 0 1.25rem;
   border-radius: 0.25rem;
@@ -1157,4 +1157,9 @@ pre.Code code {
   padding: 6px 2px;
   color: var(--color-text-default-light);
   font-size: 0.875em;
+}
+
+.Footer > div {
+  text-align: center;
+  line-height: 1.5;
 }
