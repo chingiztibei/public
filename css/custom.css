@@ -92,16 +92,73 @@ body {
   padding: 20px;
 }
 
+.ArticleList > article:first-of-type {
+  padding-top: 1em;
+}
+
 .Article {
-  padding: 4em 0;
-  border-bottom: 1px solid #ddd;
+  padding: 2em 0 4em 0;
+  border-bottom: 0.5px solid var(--color-text-gray);
+}
+
+.visible-xs {
+  display: block;
+}
+
+.hidden-xs {
+  display: none;
 }
 
 @media (min-width: 719px) {
   .books > div {
     flex-direction: row;
   }
+
   .group {
     flex-direction: row;
+  }
+
+  .ArticleList {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  .ArticleList > article:first-of-type {
+    padding-top: 0;
+  }
+  
+  .Article {
+    padding: 0;
+    margin: 4em 2em;
+    min-width: 240px;
+    border-bottom: 0
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    margin: 4em 2em;
+  }
+
+  .flex > .Header__Title {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 3em;
+  }
+
+  .visible-xs {
+    display: none;
+  }
+
+  .hidden-xs {
+    display: block;
+  }
+
+  .IndexHeader {
+    width: 100%;
+    max-width: 100%;
+    padding: 0px 2em;
   }
 }
