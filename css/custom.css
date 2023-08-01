@@ -96,6 +96,10 @@ body {
   padding-top: 1em;
 }
 
+.ArticleList > article:last-of-type {
+  border-bottom: none;
+}
+
 .Article {
   padding: 2em 0 4em 0;
   border-bottom: 0.5px solid var(--color-text-gray);
@@ -160,18 +164,18 @@ body {
 .card-images {
   display: grid;
   grid-template-columns: 65% 35%;
-  grid-gap: 4px;
+  grid-gap: 2px;
 }
 
 .collection-photos {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 4px;
+  grid-gap: 2px;
 }
 
 .collection-photos img {
   width: 100%;
-  height: 98px !important;
+  height: 99px !important;
   object-fit: cover;
 }
 
@@ -194,18 +198,20 @@ body {
   .ArticleList > article:first-of-type {
     padding-top: 0;
   }
-  
+
   .Article {
     padding: 0;
     margin: 4em 2em;
     min-width: 240px;
-    border-bottom: 0
+    border-bottom: 0;
   }
 
   .flex {
     display: flex;
     flex-direction: row;
-    margin: 4em 2em;
+    width: 96%;
+    max-width: 1280px;
+    margin: 4em auto;
   }
 
   .flex > .Header__Title {
@@ -223,8 +229,8 @@ body {
   }
 
   .IndexHeader {
-    width: 100%;
-    max-width: 100%;
-    padding: 0px 2em;
+    width: 96%;
+    max-width: 1280px;
+    padding: 0;
   }
 }
