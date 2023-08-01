@@ -109,6 +109,72 @@ body {
   display: none;
 }
 
+#collections-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 16px;
+  list-style: none;
+  padding: 0;
+  width: 96%;
+  max-width: 1280px;
+  margin: auto;
+  row-gap: 48px;
+}
+
+#collections-list li {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#collections-list li:hover {
+  opacity: 0.8;
+}
+
+#collections-list li a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-default);
+}
+
+#collections-list li img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.collection-info {
+  padding: 10px;
+}
+
+.collection-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.collection-photos-count {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-images {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-gap: 4px;
+}
+
+.collection-photos {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 4px;
+}
+
+.collection-photos img {
+  width: 100%;
+  height: 98px !important;
+  object-fit: cover;
+}
+
 @media (min-width: 719px) {
   .books > div {
     flex-direction: row;

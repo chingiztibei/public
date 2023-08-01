@@ -138,7 +138,7 @@
 
   <header class="Header visible-xs">
     <div class="Header__Spacer--NoCover"></div>
-    <h1 class="Header__Title">Блог</h1>
+    <h2 class="Header__Title">Блог</h2>
   </header>
   <div class="flex">
     <h1 class="Header__Title hidden-xs">Блог</h1>
@@ -600,7 +600,80 @@
 
 </article>
   </div>
+  <div class="unsplash">
+    <ul id="collections-list">
+    <h2 class="Header__Title">Фотографии</h2>
+</ul>
 
+<script>
+  // JavaScript
+  const accessKey = "Xm4Ccq8CTUP_s9Lu_ZuW8lVXaEbOsH3IuRuRnPW3-rM";
+  const username = "chingiztibei";
+
+  const collectionsList = document.getElementById("collections-list");
+
+  // Функция для выполнения GET-запросов к Unsplash API
+  async function fetchUnsplashAPI(url) {
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Client-ID ${accessKey}`,
+      },
+    });
+    return await response.json();
+  }
+
+  async function getCollectionPhotos(collectionId) {
+    const url = `https://api.unsplash.com/collections/${collectionId}/photos?per_page=3`;
+    const photosData = await fetchUnsplashAPI(url);
+    return photosData.map((photo) => photo.urls.small);
+  }
+
+  async function getCollections() {
+    try {
+      const url = `https://api.unsplash.com/users/${username}/collections`;
+      const response = await fetchUnsplashAPI(url);
+
+      // Обработка полученных данных
+      for (const collection of response) {
+        const collectionId = collection.id;
+        const photos = await getCollectionPhotos(collectionId);
+
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `
+              <a href="${
+                collection.links.html
+              }" target="_blank" rel="noopener noreferrer">
+                <div class="card-images">
+                    <img src="${photos[0]}" alt="${collection.title}" />
+                    <div class="collection-photos">
+                        ${photos
+                          .slice(1)
+                          .map(
+                            (photoUrl) =>
+                              `<img src="${photoUrl}" alt="${collection.title}" />`
+                          )
+                          .join("")}
+                    </div>
+                </div>
+                <div class="collection-info">
+                  <div class="collection-title">${collection.title}</div>
+                  <div class="collection-photos-count">${
+                    collection.total_photos
+                  } photos · Curated by Chingiz T</div>
+                </div>
+              </a>
+            `;
+        collectionsList.appendChild(listItem);
+      }
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  }
+
+  getCollections();
+</script>
+
+  </div>
   <footer class="Footer">
   <div>Собрано студией <a href="http://tinystudio.art" target="_blank"
       rel="noopener noreferrer">Tiny Studio</a> <br />2023
