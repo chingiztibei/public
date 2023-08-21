@@ -242,6 +242,7 @@ h1#quote {
 .Text__Content {
   max-width: 720px;
   hanging-punctuation: first;
+  margin-bottom: 20px;
 }
 
 .BulletedList {
