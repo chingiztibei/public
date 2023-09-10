@@ -6,6 +6,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "avenir next",
     avenir, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto,
     noto, arial, sans-serif;
+    padding-bottom: 120px;
 }
 
 .logo {
@@ -184,9 +185,18 @@ body {
   padding: 0 16px;
 }
 
-h1#quote {
+h1, h1#quote, blockquote {
   max-width: 720px;
 }
+
+.Quote {
+  background: var(--color-bg-green-light);
+  border-left: 4px solid var(--color-bg-green);
+  border-radius: 0;
+  margin: 1em 0;
+  padding: 1em;
+  font-size: 1em;
+  }
 
 #collections-list {
   display: grid;
@@ -257,7 +267,18 @@ h1#quote {
 .Text__Content {
   max-width: 720px;
   hanging-punctuation: first;
-  margin-bottom: 20px;
+  padding: 2px;
+  margin: 2px 0;
+  margin-bottom: 6px;
+}
+
+.Bookmark {
+  margin: 8px 0;
+  border: 0;
+  border-radius: 0;
+  padding: 24px 16px;
+  background: var(--color-bg-green);
+  max-width: 720px;
 }
 
 .BulletedList {
