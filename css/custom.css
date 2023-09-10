@@ -322,6 +322,11 @@ h1, h1#quote, blockquote {
 }
 
 @media (min-width: 768px) {
+  body {
+      padding-bottom: 0;
+  }
+
+  
   .logo {
     margin: 24px 0 0 24px;
   }
