@@ -8,18 +8,18 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <!-- Chrome, Firefox OS and Opera Status Bar Color -->
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 <link rel="stylesheet" type="text/css"
   href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
-<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css"> -->
 <link rel="stylesheet" type="text/css" href="css/theme.css">
 <link rel="stylesheet" type="text/css" href="css/notablog.css">
 <link rel="stylesheet" type="text/css" href="css/custom.css">
 <!-- Favicon -->
-<link rel="icon" href="../images/favicon.ico" sizes="any">
-<link rel="icon" href="../images/favicon.svg" type="image/svg+xml" crossorigin="use-credentials">
-<link rel="apple-touch-icon" href="../images/apple-touch-icon.png" crossorigin="use-credentials">
+<link rel="icon" href="https://chingiztibei.com/images/favicon.ico" sizes="any">
+<link rel="icon" href="https://chingiztibei.com/images/favicon.svg" type="image/svg+xml" crossorigin="use-credentials">
+<link rel="apple-touch-icon" href="https://chingiztibei.com/images/apple-touch-icon.png" crossorigin="use-credentials">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83734662-1"></script>
 <script>
@@ -39,24 +39,13 @@
       <meta name="description" content="">
       <meta property="og:description" content="">
     
-    
+    <link rel="preload" as="image" href="../images/book.png">
     
   </head>
 
   <body>
-    <!-- <nav class="Navbar">
-  <div>
-    <a href="index.html">
-      <div class="Navbar__Btn">
-        
-        <span>Главная</span>
-      </div>
-    </a>
-                                                                        
-  </div>
-</nav> -->
-<div>
-  <a href="index.html"><img src="../images/logo-black.svg" class="logo" /></a>
+    <div>
+  <a href="index.html"><img src="../images/logo-black.svg" class="logo" sizes="any" /></a>
 </div>
     <header class="Header IndexHeader">
   
@@ -112,7 +101,7 @@
         <div class="DateTagBar">
           
             <span class="DateTagBar__Item DateTagBar__Date">Обновлено в чт, 7 сент. 2023 г.</span>
-          
+                    
           
             <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--blue">
               <a href="tag/Travel.html">Travel</a>
@@ -138,7 +127,7 @@
         <div class="DateTagBar">
           
             <span class="DateTagBar__Item DateTagBar__Date">Обновлено в чт, 7 сент. 2023 г.</span>
-          
+                    
           
             <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--blue">
               <a href="tag/Travel.html">Travel</a>
@@ -164,7 +153,7 @@
         <div class="DateTagBar">
           
             <span class="DateTagBar__Item DateTagBar__Date">Обновлено в чт, 7 сент. 2023 г.</span>
-          
+                    
           
             <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--blue">
               <a href="tag/Travel.html">Travel</a>
@@ -186,14 +175,13 @@
     <p class="author" id="author"></p>
   </div>
 </div>
-
-<script src="js/quotes.js"></script>
     
     <div class="unsplash">
-      <ul id="collections-list">
-    <h2 class="Header__Title">Фото</h2>
-</ul>
-
+      <div class="blog">
+  <h2 class="Header__Title">Фото</h2>
+  <ul id="collections-list">
+  </ul>
+</div>
 <script>
   // JavaScript
   const accessKey = "Xm4Ccq8CTUP_s9Lu_ZuW8lVXaEbOsH3IuRuRnPW3-rM";
@@ -239,7 +227,7 @@
                           .slice(1)
                           .map(
                             (photoUrl) =>
-                              `<img src="${photoUrl}" alt="${collection.title}" />`
+                              `<img src="${photoUrl}" alt="${collection.title}" loading="lazy" />`
                           )
                           .join("")}
                     </div>
@@ -248,7 +236,7 @@
                   <div class="collection-title">${collection.title}</div>
                   <div class="collection-photos-count">${
                     collection.total_photos
-                  } photos · Curated by Chingiz T</div>
+                  } photos</div>
                 </div>
               </a>
             `;
@@ -275,8 +263,7 @@
   </div>
 </footer>
 
-<script src="js/footer.js"></script>
-
   </body>
-
+  <script src="js/quotes.js" defer></script>
+  <script src="js/footer.js" defer></script>
 </html>
