@@ -1,0 +1,121 @@
+body {
+  background-image: url(../files/bg-lines.svg);
+}
+
+/* Adds dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-image: url(../files/white-bg-lines.svg);
+  }
+}
+
+p.small {
+    font-size: 1.2rem;
+}
+
+nav a, figure a {
+    background: none!important;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.Anchor {
+    color: inherit;
+    text-decoration: none;
+    text-shadow: none;
+    background: none!important;
+    padding-right: 8px;
+    margin-left: -24px;
+    visibility: visible;
+}
+
+/* Embed */
+
+.Embed__Content {
+    display: flex;
+    max-width: 90%;
+    clear: both;
+  }
+  
+  .Embed__Caption {
+    padding: 6px 2px;
+    color: var(--color-text-default-light);
+    font-size: 0.875em;
+  }
+  
+  .Embed__ResponsiveContainer {
+    position: relative;
+    min-height: 100px;
+    height: 0;
+    margin: 0 auto;
+  }
+  
+  .Embed__ResponsiveContainer > iframe {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1px;
+    pointer-events: auto;
+    background-color: rgb(247, 246, 245);
+  }
+
+  /* Image */
+
+.Image {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    align-self: center;
+  }
+  
+  .Image--FullWidth {
+    width: calc(100vw - 15px);
+  }
+  
+  .Image--Normal,
+  .Image--PageWidth {
+    max-width: 100%;
+  }
+  
+  .Image--Normal {
+    text-align: center;
+  }
+  
+  .Image--PageWidth {
+    width: 100%;
+  }
+  
+  .Image > figure {
+    margin: 0;
+  }
+  
+  .Image > figure > figcaption {
+    color: var(--color-text-default-light);
+    font-size: 0.875rem;
+    text-align: left;
+  }
+  
+  .Image--FullWidth > figure img {
+    /* 15px is scrollbar */
+    width: calc(100vw - 15px);
+    object-fit: cover;
+  }
+  
+  .Image--FullWidth > figure > figcaption {
+    padding: 6px 26px;
+  }
+  
+  .Image--Normal > figure img,
+  .Image--PageWidth > figure img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .Image--Normal > figure > figcaption,
+  .Image--PageWidth > figure > figcaption {
+    padding: 6px 2px;
+  }
