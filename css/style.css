@@ -5,7 +5,7 @@ body {
 /* Adds dark mode */
 @media (prefers-color-scheme: dark) {
   body {
-      background-image: url(../files/white-bg-lines.svg);
+      background-image: url(../files/bg-lines-white.svg);
   }
 }
 
